@@ -1,25 +1,22 @@
 # Elden Ring ModEngine2 TOML Configurator
-一个用于自动生成 Elden Ring 游戏 ModEngine2 配置文件的 Python 工具。该工具会扫描当前目录，识别 DLL 文件和 Mod 文件夹，并生成符合 ModEngine2 规范的~config_eldenring.toml~配置文件。
+一个用于自动生成 Elden Ring 游戏 ModEngine2 配置文件的 Python 工具。该工具会扫描当前目录，识别 DLL 文件和 Mod 文件夹，并生成符合 ModEngine2 规范的*config_eldenring.toml*配置文件。
 
 # 使用方法
-将脚本放置在MOD根目录（与 modengine2_launcher.exee 同级）
+解压并将脚本放置在MOD根目录（与 modengine2_launcher.exee 同级）
 确保已安装 Python 3.8 或更高版本
 运行程序: EldenRingModder.exe
 脚本会自动生成或**覆盖**config_eldenring.toml文件
 启动 ModEngine2 加载游戏
 >[modengine]
 debug = false
-# DLL配置
 external_dlls = [ 
     "dinput8.dll",
     "dsound.dll",
-    # 其他DLL文件...
+    其他DLL文件...
 ]
-# Mod loader配置
 [extension.mod_loader]
 enabled = true
 loose_params = false
-# 文件夹Mod配置
 mods = [
     { enabled = true, name = "MyMod1", path = "mods\\MyMod1" },
     { enabled = true, name = "MyMod2", path = "mods\\MyMod2" },
